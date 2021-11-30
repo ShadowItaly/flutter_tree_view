@@ -16,7 +16,6 @@ class LinesWidget extends StatelessWidget {
 
     late final child = SizedBox(
       width: treeNodeScope.indentation,
-      height: double.infinity,
     );
 
     switch (treeNodeScope.theme.lineStyle) {
