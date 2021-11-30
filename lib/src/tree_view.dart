@@ -153,7 +153,6 @@ class _TreeViewState extends State<TreeView> {
         controller: widget.scrollController,
         padding: widget.padding,
         shrinkWrap: widget.shrinkWrap,
-        itemExtent: widget.nodeHeight,
         childrenDelegate: SliverChildBuilderDelegate(
           _nodeBuilder,
           childCount: controller.visibleNodes.length,
