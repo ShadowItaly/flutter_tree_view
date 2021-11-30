@@ -16,18 +16,20 @@ class LinesWidget extends StatelessWidget {
 
     late final child = SizedBox(
       width: treeNodeScope.indentation,
-      height: 200,
+      height: 2,
     );
+    
 
     switch (treeNodeScope.theme.lineStyle) {
       case LineStyle.scoped:
-        return CustomPaint(
+        
+        Container(decoration: BoxDecoration(border: Border(left: BorderSide(color: Colors.black,width: 2))), child: CustomPaint(
           painter: LinesPainter(
             linesToBeDrawn: treeNodeScope.node.scopedLines,
             theme: treeNodeScope.theme,
           ),
           child: child,
-        );
+        ));
 
       case LineStyle.connected:
         return CustomPaint(
