@@ -23,7 +23,7 @@ class LinesWidget extends StatelessWidget {
     switch (treeNodeScope.theme.lineStyle) {
       case LineStyle.scoped:
         
-        Container(decoration: BoxDecoration(border: Border(left: BorderSide(color: Colors.black,width: 2))), child: CustomPaint(
+        return Container(decoration: BoxDecoration(border: Border(left: BorderSide(color: Colors.black,width: 2))), child: CustomPaint(
           painter: LinesPainter(
             linesToBeDrawn: treeNodeScope.node.scopedLines,
             theme: treeNodeScope.theme,
